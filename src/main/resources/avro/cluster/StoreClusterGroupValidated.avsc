@@ -1,0 +1,170 @@
+{
+  "namespace": "com.adeo.offer.cluster.events.cluster.model.v2",
+  "type": "record",
+  "name": "StoreClusterGroupValidated",
+  "version": 1,
+  "doc": "Store Cluster Group Validated : it is identified by the field: storeClusterGroupIdentifier",
+  "fields": [
+    {
+      "name": "storeClusterGroupIdentifier",
+      "type": "int",
+      "doc": "It is the unique identifier for a Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupType",
+      "type": "string",
+      "doc": "It is the type of the Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupStartDate",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "It is the start date of the validity of the Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupEndDate",
+      "type": [
+        "null",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ],
+      "doc": "It is the end date of validity of the Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupDeterminationMode",
+      "type": [
+        "null",
+        "string"
+      ],
+      "doc": "It is the business way to determine the Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupCreationCollaboratorIdentifier",
+      "type": [
+        "null",
+        "string"
+      ],
+      "doc": "It is a code that is used to identify each collaborator in ADEO. In this case, it determines the collaborator at the origin of the creation of a Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupCreationDate",
+      "type": [
+        "null",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ],
+      "doc": "It is the creation date of the Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupValidationCollaboratorIdentifier",
+      "type": [
+        "null",
+        "string"
+      ],
+      "doc": "It is a code that is used to identify each collaborator in ADEO. In this case, it determines the collaborator at the origin of the validation of a Store Cluster Group."
+    },
+    {
+      "name": "storeClusterGroupValidationDate",
+      "type": [
+        "null",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ],
+      "doc": "It is the validation date of the Store Cluster Group."
+    },
+    {
+      "name": "productUsageCategoryIdentifier",
+      "type": "int",
+      "doc": "It is the unique identifier for a Product Usage Category."
+    },
+    {
+      "name": "clusters",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "ClusterValidated",
+          "fields": [
+            {
+              "name": "storeClusterIdentifier",
+              "type": "int",
+              "doc": "It is the unique identifier for a Store Cluster."
+            },
+            {
+              "name": "storeClusterName",
+              "type": "string",
+              "doc": "It is the name that is used to identify the Store Cluster."
+            },
+            {
+              "name": "storeClusterDescription",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "This description allows to describe the Store Cluster inside the Store Cluster Group with more details."
+            },
+            {
+              "name": "storeClusterOrdering",
+              "type": "int",
+              "doc": "It is the order of the Store Cluster inside the Store Cluster Group."
+            },
+            {
+              "name": "storeClusterCharacteristic",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "It is the characteristic of the Cluster inside the Cluster Group."
+            },
+            {
+              "name": "storeClusterCreationCollaboratorIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "It is a code that is used to identify each collaborator in ADEO. In this case, it determines the collaborator at the origin of the creation of a Store Cluster."
+            },
+            {
+              "name": "storeClusterCreationDate",
+              "type": [
+                "null",
+                {
+                  "type": "int",
+                  "logicalType": "date"
+                }
+              ],
+              "doc": "It is the creation date of the Store Cluster."
+            },
+            {
+              "name": "storeClusterValidationCollaboratorIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "It is a code that is used to identify each collaborator in ADEO. In this case, it determines the collaborator at the origin of the validation of a Store Cluster."
+            },
+            {
+              "name": "storeClusterValidationDate",
+              "type": [
+                "null",
+                {
+                  "type": "int",
+                  "logicalType": "date"
+                }
+              ],
+              "doc": "It is the validation date of the Store Cluster."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

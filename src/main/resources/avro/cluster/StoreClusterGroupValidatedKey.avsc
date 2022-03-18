@@ -1,0 +1,13 @@
+{
+  "namespace": "com.adeo.offer.cluster.events.cluster.model.v2",
+  "type": "record",
+  "name": "StoreClusterGroupValidatedKey",
+  "version": 1,
+  "fields": [
+    {
+      "name": "storeClusterGroupIdentifier",
+      "type": "int",
+      "doc": "It is the unique identifier for a Store Cluster Group."
+    }
+  ]
+}
